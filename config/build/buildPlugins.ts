@@ -2,16 +2,18 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import Dotenv from 'dotenv-webpack'
 import { BuildOptions } from './types'
 
 export function buildPlugins({
     paths,
     isDev,
-    isAnalyze,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
     return [
+        new Dotenv(),
         new HtmlWebpackPlugin({
             template: paths.html,
+            publicPath: 'auto',
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({

@@ -8,7 +8,6 @@ export interface BuildEnv {
 export interface BuildOptions extends BuildEnv {
     paths: BuildPaths
     isDev: boolean
-    isAnalyze: boolean
 }
 
 export interface BuildPaths {

@@ -1,9 +1,10 @@
 import { Alchemy, Network } from 'alchemy-sdk'
-import { useCallback, useEffect, useState } from 'react'
-import { Block } from 'node_modules/@ethersproject/abstract-provider/lib'
-import BlockMainInfo from './components/BlockMainInfo'
+import { useEffect, useState } from 'react'
 
-import './App.css'
+import BlockMainInfo from './components/BlockMainInfo'
+import { Block } from './types/ethereum'
+
+import './App.scss'
 
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
