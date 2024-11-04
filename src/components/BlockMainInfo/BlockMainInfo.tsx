@@ -1,4 +1,6 @@
-import { Block } from 'src/types/ethereum'
+import { Block } from 'app/types/ethereum'
+
+import styles from './BlockMainInfo.module.scss'
 
 interface BlockMainInfoProps {
     info: Block
@@ -29,6 +31,6 @@ const BlockMainInfo = (props: BlockMainInfoProps) => {
         })
     }
 
-    return <div>{render(info)}</div>
+    return <div className={styles.container}>{render(info)}</div>
 }
 export default BlockMainInfo

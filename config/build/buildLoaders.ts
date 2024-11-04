@@ -7,7 +7,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
         use: [
             {
-                loader: 'file-loader',
+                loader: 'asset',
             },
         ],
     }
@@ -24,6 +24,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                 loader: 'css-loader',
                 options: {
                     modules: {
+                        namedExport: false,
                         auto: (resPath: string) =>
                             Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
