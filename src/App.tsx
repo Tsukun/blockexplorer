@@ -1,4 +1,4 @@
-import BlockPage from './pages/BlockPage'
+import BlockPage from 'pages/BlockPage/BlockPage'
 
 function App() {
     return (

@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Alchemy, Network } from 'alchemy-sdk'
 
+import Info from 'components/Info/Info'
 import { Block } from 'app/types/ethereum'
-import BlockMainInfo from 'components/BlockMainInfo/BlockMainInfo'
+
+import styles from './BlockPage.module.scss'
+
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
 // level code.
@@ -42,9 +45,9 @@ const BlockPage = () => {
     }, [blockNumber])
 
     return (
-        <div>
+        <div className={styles.container}>
             Block Number: {blockNumber}
-            <BlockMainInfo info={blockInfo} />
+            <Info info={blockInfo} />
         </div>
     )
 }

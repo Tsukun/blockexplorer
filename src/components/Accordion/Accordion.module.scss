@@ -1,0 +1,27 @@
+.icon {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+
+    transition: all 0.2s;
+    &--translate {
+        transform: scale(1, -1) translateY(50%);
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.button {
+    text-align: left;
+    padding: 4px;
+    border: 1px solid;
+    width: 100%;
+    background-color: #fff;
+}

@@ -1,12 +1,13 @@
 import { Block } from 'app/types/ethereum'
 
-import styles from './BlockMainInfo.module.scss'
+import styles from './Info.module.scss'
+import Accordion from 'components/Accordion/Accordion'
 
 interface BlockMainInfoProps {
     info: Block
 }
 
-const BlockMainInfo = (props: BlockMainInfoProps) => {
+const Info = (props: BlockMainInfoProps) => {
     const { info } = props
 
     const render = (object: Block | any): React.ReactNode => {
@@ -17,10 +18,9 @@ const BlockMainInfo = (props: BlockMainInfoProps) => {
             const typedKey = key as keyof Block
             if (typeof object[typedKey] === 'object') {
                 return (
-                    <details key={key}>
-                        <summary>{key}</summary>
-                        <span>{render(object[typedKey])}</span>
-                    </details>
+                    <Accordion title={key}>
+                        {render(object[typedKey])}
+                    </Accordion>
                 )
             }
             return (
@@ -33,4 +33,4 @@ const BlockMainInfo = (props: BlockMainInfoProps) => {
 
     return <div className={styles.container}>{render(info)}</div>
 }
-export default BlockMainInfo
+export default Info
