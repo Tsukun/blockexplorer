@@ -6,22 +6,36 @@
     width: 20px;
     height: 20px;
     right: 10px;
-
-    transition: all 0.2s;
+    fill: var(--default-color);
+    transition: all 0.3s;
     &--translate {
-        transform: scale(1, -1) translateY(50%);
+        transform: rotateX(180deg) translateY(50%);
     }
 }
 
-.wrapper {
-    position: relative;
+.container {
     width: 100%;
 }
 
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
 .button {
+    width: 100%;
     text-align: left;
     padding: 4px;
-    border: 1px solid;
+    outline: none;
+    border: none;
+    border-radius: var(--main-border-radius);
+    background-color: var(--main-color);
+    color: var(--default-color);
+}
+
+.items {
     width: 100%;
-    background-color: #fff;
+    position: absolute;
+    z-index: var(--z-index-main);
+    top: 100%;
 }

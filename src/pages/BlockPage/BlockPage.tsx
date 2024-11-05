@@ -38,10 +38,12 @@ const BlockPage = () => {
         }
 
         getBlockNumber()
-    })
+    }, [])
 
     useEffect(() => {
-        getBlock(blockNumber)
+        if (blockNumber) {
+            getBlock(blockNumber)
+        }
     }, [blockNumber])
 
     return (

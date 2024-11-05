@@ -1,4 +1,20 @@
 :root {
+    //----PADDING----
     --top-down-padding: 16px;
+    --top-down-secondary-padding: 32px;
     --right-left-padding: 12px;
+
+    //----MARGIN-----
+    --top-margin: 100px;
+
+    //----SCROLLBAR----
+    --scrollbar-max-height: 400px;
+    --scrollbar-width: 5px;
+    --scrollbar-color: var(--main-color);
+
+    //----RADIUS----
+    --main-border-radius: 8px;
+
+    //----Z-INDEX----
+    --z-index-main: 4;
 }

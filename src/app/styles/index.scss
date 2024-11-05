@@ -1,6 +1,11 @@
 @use './reset.scss';
 @use './variables.scss';
+@use './color.scss';
 
 .app {
-    min-height: 100vh;
+    height: 100vh;
+}
+
+body {
+    background-color: var(--bg-main-color);
 }
