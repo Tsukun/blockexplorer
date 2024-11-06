@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+
+    padding: var(--default-padding);
+    background-color: var(--accent-color);
+    border-radius: var(--primary-border-radius);
+}
+
+.title {
+    font-size: 14px;
+}

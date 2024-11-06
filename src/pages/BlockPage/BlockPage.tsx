@@ -5,6 +5,7 @@ import { Info } from 'widgets/Info'
 import { Block } from 'app/types/ethereum'
 
 import styles from './BlockPage.module.scss'
+import Header from 'shared/ui/Header/Header'
 
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
@@ -48,7 +49,7 @@ const BlockPage = () => {
 
     return (
         <div className={styles.container}>
-            Block Number: {blockNumber}
+            <Header title={'Block Number'}> {blockNumber}</Header>
             <Info info={blockInfo} />
         </div>
     )
