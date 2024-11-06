@@ -5,13 +5,14 @@
     align-items: center;
 
     width: 100%;
-    max-width: 800px;
+    max-width: var(--block-width);
     margin: auto;
+    margin-top: var(--top-margin);
 
     padding: var(--top-down-secondary-padding) var(--right-left-padding);
 
-    border: 1px solid;
     border-radius: var(--main-border-radius);
 
-    background-color: var(--bg-secondary-color);
+    background: var(--default-color);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
 }

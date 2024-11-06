@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: var(--height-navbar);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* You can change this to the desired color */
+    padding: var(--default-padding);
+}

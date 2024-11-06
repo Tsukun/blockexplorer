@@ -29,8 +29,13 @@
     outline: none;
     border: none;
     border-radius: var(--main-border-radius);
-    background-color: var(--main-color);
-    color: var(--default-color);
+    background-color: var(--primary-color);
+
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: var(--secondary-color);
+    }
 }
 
 .items {

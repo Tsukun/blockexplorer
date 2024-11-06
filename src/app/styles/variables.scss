@@ -1,5 +1,6 @@
 :root {
     //----PADDING----
+    --default-padding: 8px;
     --top-down-padding: 16px;
     --top-down-secondary-padding: 32px;
     --right-left-padding: 12px;
@@ -17,4 +18,10 @@
 
     //----Z-INDEX----
     --z-index-main: 4;
+
+    //----HEIGHT----
+    --height-navbar: 40px;
+
+    //----WIDTH----
+    --block-width: 700px;
 }

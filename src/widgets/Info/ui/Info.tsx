@@ -1,9 +1,10 @@
 import { Block } from 'app/types/ethereum'
+import classNames from 'classnames'
+
+import Accordion from 'shared/ui/Accordion/Accordion'
+import Scrollbar from 'shared/ui/Scrollbar/Scrollbar'
 
 import styles from './Info.module.scss'
-import Accordion from 'components/Accordion/Accordion'
-import classNames from 'classnames'
-import Scrollbar from 'components/Scrollbar/Scrollbar'
 
 interface BlockMainInfoProps {
     className?: string

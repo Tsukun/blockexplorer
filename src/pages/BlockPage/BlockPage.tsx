@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Alchemy, Network } from 'alchemy-sdk'
 
-import Info from 'components/Info/Info'
+import { Info } from 'widgets/Info'
 import { Block } from 'app/types/ethereum'
 
 import styles from './BlockPage.module.scss'
