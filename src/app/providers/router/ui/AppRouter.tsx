@@ -6,7 +6,7 @@ import { routeConfig } from 'shared/config/routeConfig/routeConfig'
 const AppRouter = () => (
     <Switch>
         {Object.values(routeConfig).map(({ element, path }) => (
-            <Route path={path}>
+            <Route key={path} path={path}>
                 <Suspense fallback={<div>FALLBACK MOCK</div>}>
                     {element}
                 </Suspense>

@@ -1,0 +1,12 @@
+.container {
+    border: 1px solid;
+    border-radius: var(--primary-border-radius);
+    padding: var(--default-padding);
+    background-color: var(--secondary-color);
+
+    transition: filter 0.3s;
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}
