@@ -1,14 +1,16 @@
-import { Block } from 'app/types/ethereum'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
+
+import { Block } from 'app/types/ethereum'
 
 import Accordion from 'shared/ui/Accordion/Accordion'
 import Scrollbar from 'shared/ui/Scrollbar/Scrollbar'
-
-import styles from './BlockInfo.module.scss'
-import { Link } from 'react-router-dom'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import Typography from 'shared/ui/Typography/Typography'
 import Item from 'shared/ui/Item/Item'
+
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+
+import styles from './BlockInfo.module.scss'
 
 interface BlockMainInfoProps {
     className?: string
@@ -49,7 +51,7 @@ const format = (block: Block) => {
         if (typeof blockElement === 'object') {
             if (blockElement._isBigNumber) {
                 return (
-                    <Typography typography={'body1'}>
+                    <Typography typography="body1">
                         {key}: {blockElement._hex as string}
                     </Typography>
                 )
@@ -58,16 +60,16 @@ const format = (block: Block) => {
 
         if (typeof blockElement === 'string') {
             return (
-                <Typography typography={'body1'}>
+                <Typography typography="body1">
                     {key}: {blockElement}
                 </Typography>
             )
         }
 
         return (
-            <p>
+            <Typography typography="body1">
                 {key}: {blockElement.toString()}
-            </p>
+            </Typography>
         )
     })
 }

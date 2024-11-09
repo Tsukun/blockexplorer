@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 
 import { BlockInfo } from 'widgets/Block'
+
 import { alchemy } from 'shared/api/alchemy'
 import Header from 'shared/ui/Header/Header'
+import Typography from 'shared/ui/Typography/Typography'
+
 import { Block } from 'app/types/ethereum'
 
 import styles from './BlockPage.module.scss'
@@ -33,7 +36,9 @@ const BlockPage = () => {
 
     return (
         <div className={styles.container}>
-            <Header title={'Block Number'}> {blockNumber}</Header>
+            <Header title={'Block Number'}>
+                <Typography typography="body1">{blockNumber}</Typography>
+            </Header>
             <BlockInfo info={blockInfo} />
         </div>
     )

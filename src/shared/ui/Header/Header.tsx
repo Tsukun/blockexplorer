@@ -1,3 +1,5 @@
+import Typography from '../Typography/Typography'
+
 import styles from './Header.module.scss'
 
 interface HeaderProps {
@@ -9,7 +11,7 @@ const Header = (props: HeaderProps) => {
     const { children, title } = props
     return (
         <div className={styles.container}>
-            <p className={styles.title}> {title}</p>
+            <Typography typography="subtitle2"> {title}</Typography>
             {children}
         </div>
     )
