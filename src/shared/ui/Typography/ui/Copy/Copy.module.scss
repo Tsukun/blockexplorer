@@ -1,0 +1,17 @@
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+    z-index: var(--z-index-main);
+    right: -20px;
+    top: 0;
+}

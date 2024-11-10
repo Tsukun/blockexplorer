@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import styles from './Typography.module.scss'
 import { ReactNode } from 'react'
+import Copy from './ui/Copy/Copy'
 const TypographyMap = {
     h1: 'h1',
     h2: 'h2',
@@ -14,13 +15,25 @@ const TypographyMap = {
 interface TypographyProps {
     className?: string
     children: ReactNode
+    copy?: string
     typography: keyof typeof TypographyMap
 }
 
 const Typography = (props: TypographyProps) => {
-    const { className, typography, children } = props
+    const { className, typography, children, copy } = props
     return (
-        <p className={classNames(className, styles[typography])}>{children}</p>
+        <div className={styles.container}>
+            <p
+                className={classNames(
+                    className,
+                    styles.typography,
+                    styles[typography]
+                )}
+            >
+                {children}
+                {copy && <Copy value={copy} />}
+            </p>
+        </div>
     )
 }
 export default Typography

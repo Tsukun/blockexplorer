@@ -17,7 +17,7 @@ const Accordion = (props: AccordionProps) => {
     const handeIsShow = () => {
         setIsShow((prev) => !prev)
     }
-    console.log(styles)
+
     return (
         <div className={styles.wrapper}>
             <span className={classNames(className, styles.container)}>
